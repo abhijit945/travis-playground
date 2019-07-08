@@ -4,4 +4,4 @@
 [![License](https://badgen.net/badge/license/Apache-2.0/blue)](https://github.com/abhijit945/try-semantic-versioning/blob/master/LICENSE)
 
 * TravisCI build for `master` branch
-* TravisCI build with `gh-pages` deploy
+* TravisCI build with `gh-pages` deploy, to accessed from [site](https://abhijit945.github.io/try-travis/)
