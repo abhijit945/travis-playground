@@ -13,12 +13,12 @@ branches:
 jobs:
   include:
     - stage: build
-    name: "Build distributions"
-      script:
-        - npm run build
-        - npm run build:dist
+      name: "Build"
+      script: npm run build
+    - name: "Build:dist"
+      script: npm run build:dist
     - stage: deploy
-    name: "Deploy Site to gh-pages"
+      name: "Deploy - Site to gh-pages"
       script: skip
       before_deploy:
         - npm run build:site
@@ -30,6 +30,7 @@ jobs:
         on:
           branch: master
 stages:
-  - build
-  - name: deploy
+  - name: "Build"
+  - name: "Build:dist"
+  - name: "Deploy - Site to gh-pages"
     if: type != pull_request
