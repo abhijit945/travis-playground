@@ -13,10 +13,8 @@ branches:
 jobs:
   include:
     - stage: build
-      name: "Build"
       script: npm run build
-    - name: "Build:dist"
-      script: npm run build:dist
+    - script: npm run build:dist
     - stage: deploy
       name: "Deploy - Site to gh-pages"
       script: skip
@@ -30,7 +28,6 @@ jobs:
         on:
           branch: master
 stages:
-  - name: "Build"
-  - name: "Build:dist"
+  - build
   - name: "Deploy - Site to gh-pages"
     if: type != pull_request

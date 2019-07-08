@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "echo \"Error: no build specified\" && exit 0",
-    "build:dist": "echo \"Error: no build dist specified\" && exit 0",
-    "build:site": "echo \"Error: no build site specified\" && exit 0"
+    "build": "echo \"Info: No build specified\" && exit 0",
+    "build:dist": "echo \"Info: No build dist specified\" && exit 0",
+    "build:site": "echo \"Info: No build site specified\" && exit 0"
   },
   "repository": {
     "type": "git",
