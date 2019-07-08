@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
+    "lint": "echo \"Info: No lint specified\" && exit 0",
     "build": "echo \"Info: No build specified\" && exit 0",
     "build:dist": "echo \"Info: No build dist specified\" && exit 0",
     "build:site": "echo \"Info: No build site specified\" && exit 0"
