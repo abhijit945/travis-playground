@@ -1,0 +1,22 @@
+{
+  "name": "try-travis",
+  "version": "1.0.0",
+  "description": "Try out travis build",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhijit945/try-travis.git"
+  },
+  "author": "Abhijit Rao",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/abhijit945/try-travis/issues"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0"
+  },
+  "homepage": "https://github.com/abhijit945/try-travis#readme"
+}
