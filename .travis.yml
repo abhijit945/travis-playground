@@ -9,4 +9,27 @@ script:
   - npm run test
 branches:
   only:
-  - master
+    - master
+jobs:
+  include:
+    - stage: build
+    name: "Build distributions"
+      script:
+        - npm run build
+        - npm run build:dist
+    - stage: deploy
+    name: "Deploy Site to gh-pages"
+      script: skip
+      before_deploy:
+        - npm run build:site
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+        local_dir: .site
+        on:
+          branch: master
+stages:
+  - build
+  - name: deploy
+    if: type != pull_request
